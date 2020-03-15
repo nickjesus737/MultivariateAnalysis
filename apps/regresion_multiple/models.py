@@ -22,7 +22,6 @@ class ProyectoRegresionMultiple(models.Model):
 
 
 class Fila(models.Model):
-    tipo_escala = models.PositiveIntegerField()
     valor = models.FloatField()
     numero_fila = models.PositiveIntegerField()
 
