@@ -47,8 +47,9 @@ class Estudio(models.Model):
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_actualizacion = models.DateTimeField(auto_now=True)
     completado = models.BooleanField(default=False)
-    variable_dependiente = models.ForeignKey(Variable)
-    variables_independientes = models.ManyToManyField(Variable)
+    variable_dependiente = models.ForeignKey(Variable, related_name='regresion_multiple_variable_dependiente')
+    variables_independientes = models.ManyToManyField(Variable,
+                                                      related_name='regresion_multiple_variables_dependientes')
 
     def __str__(self):
         return "Nombre Proyecto: " + self.proyecto + " - Titulo Estudio: " + self.titulo
