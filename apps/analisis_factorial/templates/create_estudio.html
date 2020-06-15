@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Crear Estudio</h2>
-    <form action="/analisis-factorial/create-estudio/" method="post">
+    <form action="/analisis-factorial/create-estudio/" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit" />

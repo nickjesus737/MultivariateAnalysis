@@ -22,7 +22,7 @@ class ProyectoAnalisisFactorial(models.Model):
 
 class Estudio(models.Model):
 
-    VARIMAX = 'variamax'
+    VARIMAX = 'varimax'
     PROMAX = 'promax'
     OBLIMIN = 'oblimin'
     OBLIMAX = 'oblimax'
@@ -31,7 +31,7 @@ class Estudio(models.Model):
     EQUAMAX = 'equamax'
 
     ROTACION_METODOS = [
-        (VARIMAX, 'Variamax'),
+        (VARIMAX, 'Varimax'),
         (PROMAX, 'Promax'),
         (OBLIMIN, 'Oblimin'),
         (OBLIMAX, 'Oblimax'),
@@ -53,4 +53,4 @@ class Estudio(models.Model):
     archivo_datos = models.FileField(null=True, blank=True)
 
     def __str__(self):
-        return "Nombre Proyecto: " + self.proyecto + " - Titulo Estudio: " + self.titulo
+        return "Nombre Proyecto: " + self.proyecto.titulo + " - Titulo Estudio: " + self.titulo

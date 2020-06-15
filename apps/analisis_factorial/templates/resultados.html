@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Analisis Factorial</title>
+</head>
+<body>
+    <h3>KMO: {{ resultado.kmo_model }}</h3>
+    <h3> Cargas </h3>
+    <table>
+        {% for row in resultado.cargas %}
+        <tr>
+            {% for cell in row %}
+            <td>{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <img src= "{{ resultado.cargas_graph }}" > 
+</body>
+</html>
